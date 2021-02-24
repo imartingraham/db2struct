@@ -414,7 +414,7 @@ type testStruct struct {
 		"TimeStamp": {"nullable": "YES", "value": "timestamp"},
 	}
 
-	bytes, err := Generate(columnMap, "test_table", "testStruct", "test", false, false, true)
+	bytes, err := Generate(columnMap, []string{"column"}, "test_table", "testStruct", "test", true, false, true, true)
 
 	Convey("Should be able to generate map for guregu types", t, func() {
 		So(err, ShouldBeNil)
