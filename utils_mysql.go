@@ -95,7 +95,7 @@ func generateMysqlTypes(obj map[string]map[string]string, columnsSorted []string
 			annotations = append(annotations, fmt.Sprintf("json:\"%s\"", key))
 		}
 
-		if jsonAnnotation == true {
+		if schemaAnnotation == true {
 			annotations = append(annotations, fmt.Sprintf("schema:\"%s\"", key))
 		}
 
